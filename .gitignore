@@ -9,5 +9,8 @@
 .target
 .idea
 /target/*
+feed-ms/target/*
+user_preference-ms/target/*
+users-ms/target/*
 /RemoteSystemsTempFiles/*
 /Servers/*
