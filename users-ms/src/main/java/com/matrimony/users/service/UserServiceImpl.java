@@ -8,15 +8,17 @@ import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import javax.persistence.EntityNotFoundException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.NoSuchElementException;
 import java.util.stream.Collectors;
 
 @Service
 public class UserServiceImpl implements UserService{
 
     @Autowired
-    private UserDAO<User> userDAO;
+    private UserDAO userDAO;
 
     @Autowired
     private ModelMapper modelMapper;
@@ -33,7 +35,7 @@ public class UserServiceImpl implements UserService{
     public UserDTO fetchUserById(Long userId) {
         User user = null;
         try {
-            user = userDAO.getById(userId);
+            user = userDAO.findById(userId).get();
         } catch (Exception e) {
             Log.print("Exception class is : "+e.getClass());
         }
@@ -51,7 +53,7 @@ public class UserServiceImpl implements UserService{
         userDTOList = users.stream()
                             .map(this::convertToDTO)
                             .collect(Collectors.toList());
-        return null;
+        return userDTOList;
     }
 
     @Override

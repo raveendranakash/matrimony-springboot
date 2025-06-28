@@ -6,6 +6,7 @@ public class UserDTO {
 
     private Long id;
     private String firstName;
+    private String middleName;
     private String lastName;
     private boolean isPremiumUser;
     private LocalDateTime createdTime;
@@ -24,6 +25,14 @@ public class UserDTO {
 
     public void setFirstName(String firstName) {
         this.firstName = firstName;
+    }
+
+    public String getMiddleName() {
+        return middleName;
+    }
+
+    public void setMiddleName(String middleName) {
+        this.middleName = middleName;
     }
 
     public String getLastName() {
