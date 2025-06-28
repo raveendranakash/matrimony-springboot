@@ -9,4 +9,12 @@
     <artifactId>users-ms</artifactId>
     <name>Archetype - users-ms</name>
     <url>http://maven.apache.org</url>
+
+    <dependencies>
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <scope>runtime</scope>
+        </dependency>
+    </dependencies>
 </project>
