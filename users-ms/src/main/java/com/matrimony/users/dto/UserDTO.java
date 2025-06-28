@@ -11,6 +11,25 @@ public class UserDTO {
     private boolean isPremiumUser;
     private LocalDateTime createdTime;
 
+    public UserDTO(Long id, String fName, String mName, String lName, boolean isPremiumUser){
+        this.id=id;
+        this.firstName=fName;
+        this.middleName=mName;
+        this.lastName=lName;
+        this.isPremiumUser=isPremiumUser;
+        this.createdTime=LocalDateTime.now();
+    }
+
+    public UserDTO(String fName, String mName, String lName, boolean isPremiumUser){
+        this.firstName=fName;
+        this.middleName=mName;
+        this.lastName=lName;
+        this.isPremiumUser=isPremiumUser;
+        this.createdTime=LocalDateTime.now();
+    }
+
+    public UserDTO(){}
+
     public Long getId() {
         return id;
     }

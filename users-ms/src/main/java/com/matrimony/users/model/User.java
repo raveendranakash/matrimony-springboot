@@ -19,6 +19,19 @@ public class User {
     private boolean isPremiumUser;
     private LocalDateTime createdTime;
 
+    public User(Long id, String fName, String mName, String lName, boolean isPremiumUser){
+        this.id=id;
+        this.firstName=fName;
+        this.middleName=mName;
+        this.lastName=lName;
+        this.isPremiumUser=isPremiumUser;
+        this.createdTime=LocalDateTime.now();
+    }
+
+    public User(){
+
+    }
+
     public Long getId() {
         return id;
     }
