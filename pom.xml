@@ -19,6 +19,7 @@
     <module>users-ms</module>
     <module>user_preference-ms</module>
     <module>feed-ms</module>
+    <module>api_gateway-ms</module>
   </modules>
 
   <dependencies>

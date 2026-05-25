@@ -12,5 +12,6 @@
 feed-ms/target/*
 user_preference-ms/target/*
 users-ms/target/*
+api_gateway-ms/target/*
 /RemoteSystemsTempFiles/*
 /Servers/*
